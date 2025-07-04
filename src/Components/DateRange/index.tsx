@@ -1,13 +1,18 @@
 import React from 'react'
 import DateInput from '../DateInput'
 
-const DateRange= () => {
-  return (
-    <div>
-      <DateInput label="Inicio"/>
-      <DateInput label="Final"/> 
-    </div>
-  )
+const DateRange = () => {
+    const [inicio, setInicio] = React.useState('');
+    const [final, setFinal] = React.useState('');
+
+
+
+    return (
+        <form onSubmit={(e) => e.preventDefault()}>
+            <DateInput label="Inicio" value={inicio} onChange={({ target }) => setInicio(target.value)} />
+            <DateInput label="Final" value={final} onChange={({ target }) => setFinal(target.value)} />
+        </form>
+    )
 }
 
 export default DateRange

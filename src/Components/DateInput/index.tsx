@@ -7,8 +7,8 @@ type IDateInput = React.ComponentProps<'input'> & {
 const DateInput= ({label, ...props}: IDateInput) => {
   return (
     <div>
-      <label htmlFor="inicio">{label}</label>
-      <input id="inicio" type="date" />
+      <label htmlFor={label}>{label}</label>
+      <input id={label} name={label} type="date" {...props}/>
 
     </div>
   )
