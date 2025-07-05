@@ -5,6 +5,10 @@ type IDataContext = {
     loading: boolean;
     error: string | null;
     data: IVenda[] | null;
+    inicio: string;
+    final: string;
+    setInicio: React.Dispatch<React.SetStateAction<string>>;
+    setFinal: React.Dispatch<React.SetStateAction<string>>;
 }
 type IVenda = {
     id: string;
@@ -23,12 +27,20 @@ export const useData = () => {
     return context;
 }
 
+function getDate() {
+const date = new Date();
+console.log(date);
+}
+getDate();
+
 export const DataContextProvider = ({ children }: React.PropsWithChildren) => {
-    const { data, loading, error } = useFetch<IVenda[]>('https://data.origamid.dev/vendas',
+    const [inicio, setInicio] = React.useState('');
+    const [final, setFinal] = React.useState('');
+    const { data, loading, error } = useFetch<IVenda[]>(`https://data.origamid.dev/vendas/?inicio=${inicio}&final=${final}`,
 
     );
 
-    return <DataContext.Provider value={{ data, loading, error }}>
+    return <DataContext.Provider value={{ data, loading, error, inicio, final, setInicio, setFinal }}>
         {children}
     </DataContext.Provider>
 
