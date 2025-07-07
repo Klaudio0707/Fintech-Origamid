@@ -9,7 +9,6 @@ const DateInput= ({label, ...props}: IDateInput) => {
     <div>
       <label htmlFor={label}>{label}</label>
       <input id={label} name={label} type="date" {...props}/>
-
     </div>
   )
 }
