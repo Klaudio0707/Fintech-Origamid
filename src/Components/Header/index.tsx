@@ -1,13 +1,16 @@
-import React from 'react'
 import { useData } from '../../Context/DataContext'
 import DateRange from '../DateRange';
+import Meses from '../Meses';
 
 const index = () => {
 
   return (
-    <div>
+    <header className='mb'>
+      <div className='mb'>
    <DateRange/>
-    </div>
+      </div>
+   <Meses/>
+    </header>
   )
 }
 
