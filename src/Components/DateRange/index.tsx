@@ -1,9 +1,9 @@
-import React from 'react'
+
 import DateInput from '../DateInput'
 import { useData } from '../../Context/DataContext'
 
 const DateRange = () => {
-   const {inicio, setInicio, final, setFinal}=useData();
+    const { inicio, setInicio, final, setFinal } = useData();
 
 
 
