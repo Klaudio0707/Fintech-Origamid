@@ -1,9 +1,4 @@
-import resumo from '../../assets/icons/resumo.svg'
-import vendas from '../../assets/icons/vendas.svg'
-import webhooks from '../../assets/icons/webhooks.svg'
-import sair from '../../assets/icons/sair.svg'
-import configuracoes from '../../assets/icons/configuracoes.svg'
-import contato from '../../assets/icons/contato.svg';
+import icons from '../../assets/export';
 import { NavLink } from 'react-router-dom'
 import FintechSVG from '../../assets/FintechSVG'
 
@@ -14,37 +9,37 @@ const index = () => {
     <ul>
       <li>
         <span>
-          <img src={resumo} alt="resumo" />
+          <img src={icons.resumo} alt="resumo" />
         </span>
         <NavLink to="/">Resumo</NavLink>
       </li>
       <li>
         <span>
-          <img src={vendas} alt="vendas" />
+          <img src={icons.vendas} alt="vendas" />
         </span>
         <NavLink to="/vendas">Vendas</NavLink>
       </li>
       <li>
         <span>
-          <img src={webhooks} alt="web" />
+          <img src={icons.webhooks} alt="web" />
         </span>
         <NavLink to="/">WebHooks</NavLink>
       </li>
       <li>
         <span>
-          <img src={configuracoes} alt="configuraçõe" />
+          <img src={icons.configuracoes} alt="configuraçõe" />
         </span>
         <NavLink to="/">Configuraçõpes</NavLink>
       </li>
       <li>
         <span>
-          <img src={contato} alt="contato" />
+          <img src={icons.contato} alt="contato" />
         </span>
         <NavLink to="/">Contato</NavLink>
       </li>
       <li>
         <span>
-          <img src={sair} alt="sair" />
+          <img src={icons.sair} alt="sair" />
         </span>
         <NavLink to="/">Sair</NavLink>
       </li>

@@ -1,4 +1,3 @@
-import React from 'react'
 import { useData } from '../Context/DataContext'
 import VendaItem from '../Components/VendaItem/VendaItem';
 

@@ -1,25 +1,7 @@
 import React from "react";
 import useFetch from "../Hooks/useFetch";
-
-type IDataContext = {
-    loading: boolean;
-    error: string | null;
-    data: IVenda[] | null;
-    inicio: string;
-    final: string;
-    setInicio: React.Dispatch<React.SetStateAction<string>>;
-    setFinal: React.Dispatch<React.SetStateAction<string>>;
-}
-
-export  type IVenda = {
-    id: string;
-    nome: string;
-    preco: number;
-    status: "pago" | "processando" | "falha";
-    pagamento: "cartao" | "pix" | "boleto";
-    data: string;
-    parcelas: number | null;
-}
+import { IDataContext } from "../@types/IContextProps";
+import { IVenda } from "../@types/IVenda";
 
 const DataContext = React.createContext<IDataContext | null>(null);
 
@@ -45,7 +27,6 @@ export const DataContextProvider = ({ children }: React.PropsWithChildren) => {
   const { data, loading, error } = useFetch<IVenda[]>(
     `https://data.origamid.dev/vendas/?inicio=${inicio}&final=${final}`,
   );
-
 
   return (
     <DataContext.Provider

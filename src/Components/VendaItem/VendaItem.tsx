@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { IVenda } from '../../Context/DataContext'
+import { IVenda } from '../../@types/IVenda'
 
 const VendaItem = ({ venda }: { venda: IVenda }) => {
     return (
@@ -11,8 +11,8 @@ const VendaItem = ({ venda }: { venda: IVenda }) => {
                 <span>{venda.nome}</span>
             </div>
             <div>
-                <span>{venda.preco.toLocaleString
-                    ("pt-br", { style: 'currency', currency: "BRL" })}
+                
+                <span>{venda.preco.toLocaleString("pt-br", { style: 'currency', currency: "BRL" })}
                 </span>
             </div>
         </div>
