@@ -92,7 +92,6 @@ gap: var(--gap-s);
   align-items: center;
   justify-content:center;
   border-radius: var(--gap);
-
 }
 .sidenav li a {
   flex: 1;
@@ -100,6 +99,11 @@ gap: var(--gap-s);
   text-decoration: none;
   color: var(--color-1);
   padding: var(--gap-s);
+}
+@keyframes spin {
+  to{
+    transform: rotate(360deg);
+  }
 }
 .sidenav li:hover span {
   background: var(--color-3);
