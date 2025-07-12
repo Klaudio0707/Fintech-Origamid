@@ -11,19 +11,19 @@ function App() {
 
   return (
     <BrowserRouter>
-    <DataContextProvider>
-      <div className='container'>
-        <Sidenav />
-        <main>
-          <Header />
-          <Routes>
-            <Route path='/' element={<Resumo/>}/>
-            <Route path='/vendas' element={<Vendas/>}/>
-            <Route path='/vendas/:id' element={<Venda/>}></Route>
-          </Routes>
-        </main>
-      </div>
-    </DataContextProvider>
+      <DataContextProvider>
+        <div className='container'>
+          <Sidenav />
+          <main>
+            <Header />
+            <Routes>
+              <Route path='/' element={<Resumo />} />
+              <Route path='/vendas' element={<Vendas />} />
+              <Route path='/vendas/:id' element={<Venda />}></Route>
+            </Routes>
+          </main>
+        </div>
+      </DataContextProvider>
     </BrowserRouter>
   )
 }

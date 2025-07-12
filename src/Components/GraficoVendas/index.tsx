@@ -5,7 +5,6 @@ import { IVendaDia } from "../../@types/IVendaDia";
 import Loading from "../Loading";
 
 
-
 const transformData = (data: IVenda[]): IVendaDia[] => {
     const dias = data.reduce((acc: { [key: string]: IVendaDia }, item) => {
         const dia = item.data.split(" ")[0];
@@ -49,7 +48,7 @@ const GraficoVendas = ({ data, loading }: { data: IVenda[]; loading: boolean }) 
     return (
         <div>
             <div className="h-96 w-96">
-                <ResponsiveContainer width="99%" height={400} style={{ background: "var(--color-3)", borderRadius: "10px", padding: "20px" }}>
+                <ResponsiveContainer width="88%" height={350} style={{ borderRadius: "10px", padding: "10px" }}>
                     <LineChart data={transformedData}>
                         <XAxis dataKey="data" />
                         <YAxis />
