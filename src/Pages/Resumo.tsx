@@ -34,7 +34,7 @@ const Resumo = () => {
       </div>
             </div>
             <div className="box mb">
-              <GraficoVendas data={data}/>
+              <GraficoVendas data={data} loading={false}/>
               </div>
     </section>
   )

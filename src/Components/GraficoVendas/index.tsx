@@ -51,9 +51,9 @@ const GraficoVendas = ({ data, loading }: { data: IVenda[]; loading: boolean }) 
             <div className="h-96 w-96">
                 <ResponsiveContainer width="99%" height={400} style={{ background: "var(--color-3)", borderRadius: "10px", padding: "20px" }}>
                     <LineChart data={transformedData}>
-                     <XAxis dataKey="data" />
-                     <YAxis />
-                     <Tooltip contentStyle={cardStyle} />
+                        <XAxis dataKey="data" />
+                        <YAxis />
+                        <Tooltip contentStyle={cardStyle} />
                         <Legend wrapperStyle={{ ...cardStyle, padding: 'var(--gap)' }} />
                         <Line type="monotone" dataKey="pago" name="Pago" stroke="var(--color-1)" strokeWidth={3} />
                         <Line type="monotone" dataKey="processando" name="Processando" stroke="#d4a953" strokeWidth={3} />

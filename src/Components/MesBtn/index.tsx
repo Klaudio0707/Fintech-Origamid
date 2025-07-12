@@ -9,7 +9,7 @@ const style: React.CSSProperties = {
   color: 'var(--color-2)',
   fontWeight: '600',
   textTransform: 'capitalize',
-  cursor: 'pointer', 
+  cursor: 'pointer',
 };
 
 function nomeMes(mes: number) {
@@ -19,10 +19,10 @@ function nomeMes(mes: number) {
 }
 
 const MesBtn = ({ mes }: { mes: number }) => {
- 
+
   const { setInicio, setFinal } = useData();
 
-  
+
   function handleClick() {
     const date = new Date();
     date.setMonth(date.getMonth() + mes);
@@ -31,12 +31,12 @@ const MesBtn = ({ mes }: { mes: number }) => {
     if (setInicio) setInicio(formatDate(firstDay));
     if (setFinal) setFinal(formatDate(lastDay));
   }
-function formatDate(date: Date) {
-  const yyyy = date.getFullYear();
-  const mm = String(date.getMonth() + 1).padStart(2, '0');
-  const dd = String(date.getDate()).padStart(2, '0');
-  return `${yyyy}-${mm}-${dd}`;
-}
+  function formatDate(date: Date) {
+    const yyyy = date.getFullYear();
+    const mm = String(date.getMonth() + 1).padStart(2, '0');
+    const dd = String(date.getDate()).padStart(2, '0');
+    return `${yyyy}-${mm}-${dd}`;
+  }
   return (
     <button onClick={handleClick} style={style}>
       {nomeMes(mes)}
