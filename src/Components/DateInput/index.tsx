@@ -21,7 +21,6 @@ const inputStyle: React.CSSProperties = {
   ...generalStyle
 }
 
-
 type IDateInput = React.ComponentProps<'input'> & {
   label: string;
 }

@@ -1,22 +1,27 @@
-import { NavLink } from 'react-router-dom'
-import { IVenda } from '../../@types/IVenda'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { IVenda } from '../../@types/IVenda';
 
-const VendaItem = ({ venda }: { venda: IVenda }) => {
-    return (
-        <div className='venda box'>
-            <NavLink to={`/vendas/${venda.id}`} style={{ fontFamily: "monospace" }}>
-                {venda.id}
-            </NavLink>
-            <div>
-                <span>{venda.nome}</span>
-            </div>
-            <div>
-                
-                <span>{venda.preco.toLocaleString("pt-br", { style: 'currency', currency: "BRL" })}
-                </span>
-            </div>
-        </div>
-    )
+// ✅ Boa prática: Definir uma interface para as props do componente.
+interface VendaItemProps {
+  venda: IVenda;
 }
 
-export default VendaItem
+const VendaItem: React.FC<VendaItemProps> = ({ venda }) => {
+  return (
+    <div className='venda box'>
+      <NavLink to={`/vendas/${venda.id}`} style={{ fontFamily: "monospace" }}>
+        {venda.id}
+      </NavLink>
+      <div>{venda.nome}</div>
+      <div>
+        {venda.preco.toLocaleString("pt-br", {
+          style: 'currency',
+          currency: "BRL",
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default VendaItem;
