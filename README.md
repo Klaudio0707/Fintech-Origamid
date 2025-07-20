@@ -3,6 +3,7 @@ Fintech Dashboard
 
 
 
+<img width="1855" height="865" alt="Captura de tela 2025-07-19 211036" src="https://github.com/user-attachments/assets/33cce0e2-2bf7-4c03-a4b6-ee8ca16d53b6" />
 
 
 
