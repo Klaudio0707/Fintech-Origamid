@@ -11,8 +11,8 @@ Fintech Dashboard
 Projeto prático desenvolvido durante o curso de React com TypeScript da Origamid. O objetivo é criar um dashboard interativo para visualização de dados de vendas, aplicando conceitos modernos de desenvolvimento front-end.
 
 
-Ver projeto online »
-
+[Ver projeto online »
+https://fintech-origamid-omega.vercel.app/](https://fintech-origamid-omega.vercel.app/)
 
 
 📋 Índice
